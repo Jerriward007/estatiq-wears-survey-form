@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estatiq Wears Survey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">ESTATIQ WEARS SURVEY FORM</h1>
+    <p id="description"><em>Thank you for taking up the time to help us improve on how we craft your wears</em></p>
+
+    <form id="survey-form">
+
+      <section>
+        <label id="name-label" for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label id="email-label" for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email" required />
+
+        <label id="number-label" for="number">Phone Number</label>
+        <input type="number" id="number" name="number" placeholder="Enter your phone number" min="1000000000" max="9999999999" required />
+      </section>
+
+      <section>
+        <label for="dropdown">What is your typical monthly spending on clothing?</label>
+        <select id="dropdown" name="spending" required>
+          <option value="">-- Select an option --</option>
+          <option value="0-50">$0 - $50</option>
+          <option value="51-100">$51 - $100</option>
+          <option value="101-200">$101 - $200</option>
+          <option value="201-300">$201 - $300</option>
+          <option value="300+">$300+</option>
+        </select>
+      </section>
+
+      <section>
+        <fieldset>
+          <legend>Would you recommend Estatiq Wears to a friend?</legend>
+          <label><input type="radio" name="recommend" value="Definitely" required /> Definitely</label>
+          <label><input type="radio" name="recommend" value="Maybe" /> Maybe</label>
+          <label><input type="radio" name="recommend" value="Not sure" /> Not sure</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>How satisfied are you with the quality of our materials and craftsmanship?</legend>
+          <label><input type="radio" name="quality" value="Very Satisfied" required /> Very Satisfied</label>
+          <label><input type="radio" name="quality" value="Satisfied" /> Satisfied</label>
+          <label><input type="radio" name="quality" value="Neutral" /> Neutral</label>
+          <label><input type="radio" name="quality" value="Dissatisfied" /> Dissatisfied</label>
+          <label><input type="radio" name="quality" value="Very Dissatisfied" /> Very Dissatisfied</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>How satisfied are you with the fit and sizing of our products?</legend>
+          <label><input type="radio" name="fit" value="Very Satisfied" required /> Very Satisfied</label>
+          <label><input type="radio" name="fit" value="Satisfied" /> Satisfied</label>
+          <label><input type="radio" name="fit" value="Neutral" /> Neutral</label>
+          <label><input type="radio" name="fit" value="Dissatisfied" /> Dissatisfied</label>
+          <label><input type="radio" name="fit" value="Very Dissatisfied" /> Very Dissatisfied</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>How satisfied are you with the style and design of our products?</legend>
+          <label><input type="radio" name="style" value="Very Satisfied" required /> Very Satisfied</label>
+          <label><input type="radio" name="style" value="Satisfied" /> Satisfied</label>
+          <label><input type="radio" name="style" value="Neutral" /> Neutral</label>
+          <label><input type="radio" name="style" value="Dissatisfied" /> Dissatisfied</label>
+          <label><input type="radio" name="style" value="Very Dissatisfied" /> Very Dissatisfied</label>
+        </fieldset>
+      </section>
+
+      <section>
+        <fieldset>
+          <legend>What are your favorite clothing colors and patterns?</legend>
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="colors" value="Red" /> Red</label>
+            <label><input type="checkbox" name="colors" value="Blue" /> Blue</label>
+            <label><input type="checkbox" name="colors" value="Green" /> Green</label>
+            <label><input type="checkbox" name="colors" value="Yellow" /> Yellow</label>
+            <label><input type="checkbox" name="colors" value="Purple" /> Purple</label>
+            <label><input type="checkbox" name="colors" value="Black" /> Black</label>
+            <label><input type="checkbox" name="colors" value="White" /> White</label>
+            <label><input type="checkbox" name="colors" value="Brown" /> Brown</label>
+            <label><input type="checkbox" name="colors" value="Gray" /> Gray</label>
+            <label><input type="checkbox" name="patterns" value="Plain" /> Plain</label>
+            <label><input type="checkbox" name="patterns" value="Stripes" /> Stripes</label>
+            <label><input type="checkbox" name="patterns" value="Polka dots" /> Polka dots</label>
+            <label><input type="checkbox" name="patterns" value="Floral" /> Floral</label>
+            <label><input type="checkbox" name="patterns" value="Geometric" /> Geometric</label>
+            <label><input type="checkbox" name="patterns" value="Animal print" /> Animal print</label>
+            <label><input type="checkbox" name="patterns" value="Camouflage" /> Camouflage</label>
+            <label><input type="checkbox" name="patterns" value="Tie-dye" /> Tie-dye</label>
+            <label><input type="checkbox" name="patterns" value="Abstract" /> Abstract</label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section>
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Type your suggestions or feedback here..."></textarea>
+      </section>
+      <section>
+     <label for="likelihood">On a scale of 1–10, how likely are you to shop with us again?</label>
+      <div class="range-container">
+         <input type="range" id="likelihood" name="likelihood" min="1" max="10" value="5" />
+          <span id="range-value">5</span>
+      </div>
+      </section>
+
+      <section>
+        <label for="fileUpload">Upload a design, image, or file:</label>
+        <input type="file" id="fileUpload" name="upload" accept="image/*,.pdf,.doc,.docx" />
+      </section>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <footer>
+      <p>&copy; 2025 Ogungbemi Jeremiah Kola. All rights reserved.</p>
+    </footer>
+  </div>
+<script src="script.js"></script> 
+</body>
+</html>
