@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a0dad, #8a2be2);
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  background: linear-gradient(135deg, rgba(102, 0, 204, 0.92), rgba(0, 102, 204, 0.92));
+  color: #fff;
+  max-width: 950px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+#title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ffccff;
+}
+
+#description {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 40px;
+  color: #eeeeff;
+}
+
+form section {
+  margin-bottom: 35px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+}
+
+fieldset {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+fieldset label {
+  display: block;
+  margin: 10px 0 0;
+  font-weight: 500;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+input[type="file"] {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#submit {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background-color: #6f42c1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#submit:hover {
+  background-color: #4b0082;
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+input[type="range"] {
+  flex: 1;
+  accent-color: #ffccff;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
